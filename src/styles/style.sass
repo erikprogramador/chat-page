@@ -24,13 +24,74 @@ body
 ::-webkit-scrollbar
   display: none
 
+a
+  text-decoration: none
+  color: $main
+
+  &:hover
+    color: lighten($main, 20%)
+
 .side,
 .full
   height: 100%
   min-height: 100vh
 
 .side
+  display: flex
+  flex-direction: column
+  max-width: 80px
   background: $white
+  padding: 1em 0 0
 
 .full
   flex: 1
+
+.list-contacts
+  flex: 1
+
+.add-wrapper
+  width: 80px
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 1em 0
+  background: $white
+  transform-origin: 50% 0
+  transition: transform 200ms ease-in-out
+
+.contact
+  display: block
+  background: $white
+  padding: .5em 0
+
+  &:hover
+    .contact-name
+      transform: translate(0)
+      opacity: 1
+
+.contact-link
+  display: flex
+  align-items: center
+
+.contact-avatar
+  width: 60px
+  height: 60px
+  border-radius: 100%
+  margin: 0 10px
+  z-index: 1
+
+.contact-name
+  padding: 0 1.5em 0 1em
+  transition: transform 100ms ease-in-out, opacity 100ms ease-in-out
+  transform: translate(-100%)
+  opacity: 0
+  font-weight: 400
+  z-index: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 80px
+  background: $white
+  border-top-right-radius: 3px
+  border-bottom-right-radius: 3px
+  box-shadow: 5px 2px 10px rgba($main, .1)

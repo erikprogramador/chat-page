@@ -1,14 +1,22 @@
 <template>
-  <div>
-    <h3>Chat</h3>
-    <contacts />
-  </div>
+  <ul class="list-contacts">
+    <contact v-for="contact in contacts" :key="contact.id" :info="contact" />
+  </ul>
 </template>
 
 <script>
-  import Contacts from './Contacts.vue'
+  import Contact from './Contact.vue'
   export default {
-    components: { Contacts }
+    components: { Contact },
+    data () {
+      return {
+        contacts: [
+          { id: 1, username: 'erikprogramador', email: 'erikprogramador@erikprogramador.com', avatar: 'https://unsplash.it/100/100' },
+          { id: 2, username: 'erikmbx', email: 'programador@programador.com', avatar: 'https://unsplash.it/100/100' },
+          { id: 3, username: 'programmer', email: 'programmer@programmer.com', avatar: 'https://unsplash.it/100/100' }
+        ]
+      }
+    }
   }
 </script>
 
