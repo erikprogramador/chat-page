@@ -1,27 +1,20 @@
 <template>
   <div id="app">
-
+    <div class="side">
+      <list-chat />
+    </div>
+    <div class="full">
+      <chat-content />
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+  import ListChat from './ListChat.vue'
+  import ChatContent from './ChatContent.vue'
+  export default {
+    components: { ListChat, ChatContent }
   }
-}
 </script>
 
-<style lang="scss" scoped>
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-  }
-</style>
+<style lang="sass" src="../styles/style.sass"></style>

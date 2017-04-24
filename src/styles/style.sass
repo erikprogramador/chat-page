@@ -1,0 +1,36 @@
+@import 'vars'
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+\:root
+  font-size: 16px
+
+html,
+body
+  width: 100%
+  min-height: 100vh
+  font-family: 'Source Code Pro', sans-serif
+  background: $bg
+
+#app
+  width: 100%
+  height: 100%
+  min-height: 100vh
+  display: flex
+
+::-webkit-scrollbar
+  display: none
+
+.side,
+.full
+  height: 100%
+  min-height: 100vh
+
+.side
+  background: $white
+
+.full
+  flex: 1
