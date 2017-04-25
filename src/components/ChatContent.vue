@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <main>
+  <div class="content">
+    <main class="messages">
       <messages />
     </main>
     <footer>

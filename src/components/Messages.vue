@@ -1,9 +1,8 @@
 <template>
-  <div>
-    <ul>
-      <message />
-    </ul>
-  </div>
+  <ul class="messages-list">
+    <message :isUser="true"/>
+    <message :isUser="false"/>
+  </ul>
 </template>
 
 <script>
